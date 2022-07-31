@@ -3,10 +3,8 @@ export interface Shape {
 }
 
 export class Circle implements Shape {
-  // Is local state
-  private radius: number;
   // State initialize
-  constructor(radius: number) {
+  constructor(private radius: number) {
     this.radius = radius;
   }
   getArea(): number {
@@ -15,10 +13,8 @@ export class Circle implements Shape {
 }
 
 export class Rectangle implements Shape {
-  private width: number;
-  private height: number;
   // It also state initializer
-  constructor(width: number, height: number) {
+  constructor(public width: number, public height: number) {
     this.width = width;
     this.height = height;
   }
