@@ -1,3 +1,5 @@
+import {Circle, Rectangle, Shape} from './practice';
+
 console.log('Try npm run lint/fix!');
 
 const longString =
@@ -22,3 +24,14 @@ export function doSomeStuff(
   return;
 }
 // TODO: more examples
+function sumArray(numbers: number[]): number {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+const total = sumArray([1, 2, 3, 4, 5]);
+console.log(`total example ${total}`);
+
+const shapes: Shape[] = [new Circle(5), new Rectangle(5, 8)];
+
+shapes.forEach(shape => {
+  console.log(shape.getArea());
+});
