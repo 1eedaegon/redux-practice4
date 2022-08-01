@@ -1,27 +1,23 @@
-import {Circle, Rectangle, Shape} from './practice';
-
-const shapes: Shape[] = [new Circle(5), new Rectangle(5, 8)];
-
-shapes.forEach(shape => {
-  console.log(shape.getArea());
-});
-
-// Use placeholder type
-function merge<A, B>(a: A, b: B) {
-  return {...a, ...b};
+class Queue<T> {
+  list: T[] = [];
+  get length() {
+    return this.list.length;
+  }
+  enqueue(item: T) {
+    this.list.push(item);
+  }
+  dequeue() {
+    return this.list.shift();
+  }
 }
 
-// also used
-function wrap<T>(input: T): T {
-  return input;
-}
-
-// interface
-interface Items<T> {
-  list: T[];
-}
-
-// also use generic
-const items: Items<string> = {
-  list: ['a', 'b', 'c'],
-};
+// make numeric queue using generic
+const queue = new Queue<number>();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+console.log(queue.dequeue());
+console.log(queue.dequeue());
+console.log(queue.dequeue());
+console.log(queue.dequeue());

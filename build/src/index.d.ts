@@ -1,1 +1,7 @@
-export declare function doSomeStuff(withThis: string, andThat: string, andThose: string[]): false | undefined;
+declare class Queue<T> {
+    list: T[];
+    get length(): number;
+    enqueue(item: T): void;
+    dequeue(): T | undefined;
+}
+declare const queue: Queue<number>;
