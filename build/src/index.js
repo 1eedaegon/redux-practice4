@@ -27,4 +27,22 @@ const shapes = [new practice_1.Circle(5), new practice_1.Rectangle(5, 8)];
 shapes.forEach(shape => {
     console.log(shape.getArea());
 });
+const person = {
+    name: '김사랑',
+    age: 17,
+};
+const person2 = {
+    name: '나이가 비밀',
+};
+const expert = {
+    name: '김개발씨',
+    skills: ['js', 'ts', 'c++'],
+};
+const leedaegon = {
+    name: '이대곤씨',
+    age: 31,
+    skills: ['js', 'ts', 'k8s'],
+};
+const people = [expert, leedaegon];
+console.log(people);
 //# sourceMappingURL=index.js.map

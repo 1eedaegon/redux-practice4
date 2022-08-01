@@ -35,3 +35,27 @@ const shapes: Shape[] = [new Circle(5), new Rectangle(5, 8)];
 shapes.forEach(shape => {
   console.log(shape.getArea());
 });
+type Person = {
+  name: string;
+  age?: number;
+};
+// Type alias
+type Developer = Person & {
+  skills: string[];
+};
+
+const person: Person = {
+  name: '홍길동씨',
+  age: 12,
+};
+const expert: Developer = {
+  name: '이대곤씨 나이는',
+  skills: ['ts', 'nestjs', 'k8s'],
+};
+type People = Person[];
+
+const people: People = [person, expert];
+type Color = 'red' | 'orange' | 'yellow';
+const color: Color = 'orange';
+const colors: Color[] = ['red', 'yellow'];
+console.log(people);
