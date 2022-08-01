@@ -1,8 +1,8 @@
-# Practice redux on typescript
+# Getting Started with Create React App
 
 ## Todos
 - [x] Warmup typescript
-- [ ] Use CRA
+- [x] Use CRA
 - [ ] Use local state
 - [ ] Use context API
 - [ ] Use redux
