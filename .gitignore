@@ -1,5 +1,5 @@
 # gts build files
-build/
+build/*
 
 # Logs
 logs

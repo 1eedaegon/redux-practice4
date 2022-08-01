@@ -1,7 +1,7 @@
 # Practice redux on typescript
 
 ## Todos
-- [ ] Warmup typescript
+- [x] Warmup typescript
 - [ ] Use CRA
 - [ ] Use local state
 - [ ] Use context API
