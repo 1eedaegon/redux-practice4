@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# State management using typescript
 
 ## Todos
 - [x] Warmup typescript
