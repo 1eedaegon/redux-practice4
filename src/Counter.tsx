@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import { useReducer, useState } from 'react';
 type Action = { type: 'INCREASE' } | { type: 'DECREASE' };
 
 function reducer(state: number, action: Action): number {
@@ -14,9 +13,9 @@ function reducer(state: number, action: Action): number {
 }
 
 function Counter() {
-  const [count, setCount] = useState<number>(0);
-  const onIncrease = () => setCount(count + 1);
-  const onDecrease = () => setCount(count - 1);
+  const [count, dispatch] = useReducer(reducer, 0);
+  const onIncrease = () => dispatch({ type: 'INCREASE' });
+  const onDecrease = () => dispatch({ type: 'DECREASE' });
   return (
     <div>
       <h1>{count}</h1>
