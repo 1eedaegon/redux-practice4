@@ -1,7 +1,8 @@
 import React from 'react';
+import CounterContainer from './containers/CounterContainer';
 
 const App: React.FC = () => {
-  return <div>hello world!</div>;
+  return <CounterContainer />;
 
   // return <ReducerSample />;
 };
