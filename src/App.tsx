@@ -1,9 +1,14 @@
 import React from 'react';
 import CounterContainer from './containers/CounterContainer';
+import TodoApp from './containers/TodoApp';
 
 const App: React.FC = () => {
-  return <CounterContainer />;
-
+  return (
+    <div>
+      <TodoApp />;
+      <CounterContainer />
+    </div>
+  );
   // return <ReducerSample />;
 };
 

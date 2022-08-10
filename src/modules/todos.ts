@@ -33,7 +33,10 @@ export type TodosState = Todo[];
 
 const initialState: TodosState = [];
 
-function todos(state: TodosState, action: TodosAction): TodosState {
+function todos(
+  state: TodosState = initialState,
+  action: TodosAction
+): TodosState {
   switch (action.type) {
     case ADD_TODO:
       return state.concat({
