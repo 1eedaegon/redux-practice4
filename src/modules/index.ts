@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import counter from './counter';
 import todos from './todos';
+import github from './github';
 
-const rootReducer = combineReducers({ todos, counter });
+const rootReducer = combineReducers({ todos, counter, github });
 
 export default rootReducer;
 
