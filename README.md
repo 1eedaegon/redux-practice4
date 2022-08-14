@@ -6,4 +6,4 @@
 - [x] Use local state
 - [x] Use context API
 - [x] Use redux
-- [ ] Use redux middlewares
+- [x] Use redux middlewares
