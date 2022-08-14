@@ -5,5 +5,5 @@
 - [x] Use CRA
 - [x] Use local state
 - [x] Use context API
-- [ ] Use redux
+- [x] Use redux
 - [ ] Use redux middlewares
