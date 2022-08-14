@@ -1,17 +1,19 @@
+import createSagaMiddleware from '@redux-saga/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import App from './App';
-import rootReducer from './modules';
+import rootReducer, { rootSaga } from './modules';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(rootSaga);
 root.render(
   <React.StrictMode>
     <Provider store={store}>

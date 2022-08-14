@@ -6,6 +6,7 @@ export const GET_USER_PROFILE = 'github/GET_USER_PROFILE';
 export const GET_USER_PROFILE_SUCESS = 'github/GET_USER_PROFILE_SUCESS';
 export const GET_USER_PROFILE_ERROR = 'github/GET_USER_PROFILE_ERROR';
 
+// createAsyncAction support 4 action types: request, success, failure, cancel types
 export const getUserProfileAsync = createAsyncAction(
   GET_USER_PROFILE,
   GET_USER_PROFILE_SUCESS,
